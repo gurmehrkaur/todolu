@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "730292592811",
+    "project_id": "todoluapp",
+    "storage_bucket": "todoluapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730292592811:android:927462e9e135ef19d3d7ee",
+        "android_client_info": {
+          "package_name": "com.example.todolu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730292592811-vd9lg1o6tcdv5ik295t77hri4jjmnega.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxL_707ifoDfROWYA5dWClO1jxPIv3zTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730292592811-vd9lg1o6tcdv5ik295t77hri4jjmnega.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
