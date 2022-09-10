@@ -4,7 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class music extends AppCompatActivity {
+public class music extends AppCompatActivity
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

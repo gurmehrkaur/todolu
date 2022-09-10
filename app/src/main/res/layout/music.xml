@@ -1,6 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/musictext"
+        android:layout_width="141dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="68dp"
+        android:fontFamily="casual"
+        android:text="Music"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="152dp" />
+
+    <ImageButton
+        android:id="@+id/spotifybtn"
+        android:layout_width="129dp"
+        android:layout_height="117dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/spotify"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <ImageButton
+        android:id="@+id/youtubebtn"
+        android:layout_width="129dp"
+        android:layout_height="117dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/youtube"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <TextView
+        android:id="@+id/soundlibrary"
+        android:layout_width="327dp"
+        android:layout_height="70dp"
+        android:fontFamily="casual"
+        android:text="Sound Library"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+    <ImageButton
+        android:id="@+id/rainbtn"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/rain"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="427dp" />
+
+    <ImageButton
+        android:id="@+id/wavesbtn"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/waves"
+        tools:layout_editor_absoluteX="250dp"
+        tools:layout_editor_absoluteY="427dp" />
+
+    <ImageButton
+        android:id="@+id/cafebtn"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/cafe"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="612dp" />
+
+    <ImageButton
+        android:id="@+id/forestbtn"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/forest"
+        tools:layout_editor_absoluteX="250dp"
+        tools:layout_editor_absoluteY="612dp" />
+
+    <TextView
+        android:id="@+id/raintxt"
+        android:layout_width="59dp"
+        android:layout_height="27dp"
+        android:text="Rain"
+        android:fontFamily="casual"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <TextView
+        android:id="@+id/wavestxt"
+        android:layout_width="83dp"
+        android:layout_height="25dp"
+        android:text="Waves"
+        android:fontFamily="casual"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="293dp"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <TextView
+        android:id="@+id/cafetxt"
+        android:layout_width="72dp"
+        android:layout_height="26dp"
+        android:text="Cafe"
+        android:fontFamily="casual"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="580dp" />
+
+    <TextView
+        android:id="@+id/foresttxt"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:text="Forest"
+        android:fontFamily="casual"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="293dp"
+        tools:layout_editor_absoluteY="580dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
