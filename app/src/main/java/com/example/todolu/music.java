@@ -4,68 +4,154 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class music extends AppCompatActivity
 {
-    ImageButton getrainbtn, getwavesbtn, getcafebtn, getforestbtn, getpausebtn, getplaybtn;
-    MediaPlayer mediaPlayer;
+    ImageButton getrainbtn, getwavesbtn, getcafebtn, getforestbtn, getpausebtn, getplaybtn, getstopbtn, getspotifybtn, getyoutbtn;
+    Boolean isPlaying = false;
+    String[] songs = {"rain", "waves", "cafe", "forest"};
+    ArrayList<String> nowplaying = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.music);
-
         //sound library sounds
         getrainbtn = findViewById(R.id.rainbtn);
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.rain_audio);
+        MediaPlayer raintrack = MediaPlayer.create(this, R.raw.rain_audio);
         getrainbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.start();
+                raintrack.start();
+                isPlaying = true;
+                nowplaying.add(songs[0]);
             }
         });
         getwavesbtn = findViewById(R.id.wavesbtn);
-        MediaPlayer mediaPlayer1 = MediaPlayer.create(this, R.raw.waves_audio);
+        MediaPlayer wavestrack = MediaPlayer.create(this, R.raw.waves_audio);
         getwavesbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer1.start();
+                wavestrack.start();
+                isPlaying = true;
+                nowplaying.add(songs[1]);;
             }
         });
         getcafebtn = findViewById(R.id.cafebtn);
-        MediaPlayer mediaPlayer2 = MediaPlayer.create(this, R.raw.cafe_audio);
+        MediaPlayer cafetrack = MediaPlayer.create(this, R.raw.cafe_audio);
         getcafebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer2.start();
+                cafetrack.start();
+                isPlaying = true;
+                nowplaying.add(songs[2]);
             }
         });
         getforestbtn = findViewById(R.id.forestbtn);
-        MediaPlayer mediaPlayer3 = MediaPlayer.create(this, R.raw.forest_audio);
+        MediaPlayer foresttrack = MediaPlayer.create(this, R.raw.forest_audio);
         getforestbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer3.start();
+                foresttrack.start();
+                isPlaying = true;
+                nowplaying.add(songs[3]);
             }
         });
         getplaybtn = findViewById(R.id.playbtn);
         getplaybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.start();
+                if (isPlaying == false) //if nothing is playing, check arraylist to see what is clicked
+                {
+                    if (nowplaying.contains("rain"))
+                    {
+                        raintrack.start();
+                        isPlaying = true;
+                    }
+                    if (nowplaying.contains("waves"))
+                    {
+                        wavestrack.start();
+                        isPlaying = true;
+                    }
+                    if (nowplaying.contains("cafe"))
+                    {
+                        cafetrack.start();
+                        isPlaying = true;
+                    }
+                    if (nowplaying.contains("forest"))
+                    {
+                        foresttrack.start();
+                        isPlaying = true;
+                    }
+                    else if (nowplaying.isEmpty())
+                    {
+                    }
+                }
+                else if (isPlaying == true)
+                {
+                    Toast toast = Toast.makeText(music.this, "Music is already playing.", Toast.LENGTH_LONG);
+                    toast.show();
+                }
             }
         });
         //pause button
         getpausebtn = findViewById(R.id.pausebtn);
         getpausebtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                mediaPlayer.stop();
-                mediaPlayer1.stop();
-                mediaPlayer2.stop();
-                mediaPlayer3.stop();
+            public void onClick(View view) { //when pause is clicked, check arraylist to see what is playing to pause the audio
+                if (isPlaying == true)
+                {
+                    if (nowplaying.contains("rain"))
+                    {
+                        raintrack.pause();
+                        isPlaying = false;
+                    }
+                    if (nowplaying.contains("waves"))
+                    {
+                        wavestrack.pause();
+                        isPlaying = false;
+                    }
+                    if (nowplaying.contains("cafe"))
+                    {
+                        cafetrack.pause();
+                        isPlaying = false;
+                    }
+                    if (nowplaying.contains("forest"))
+                    {
+                        foresttrack.pause();
+                        isPlaying = false;
+                    }
+                }
+                else if (!isPlaying) //notification for when pause is clicked but nothing is playing
+                {
+                    Toast toast = Toast.makeText(music.this, "Nothing is currently playing.", Toast.LENGTH_LONG);
+                    toast.show();
+                }
+            }
+        });
+        getstopbtn = findViewById(R.id.stopbtn);
+        getstopbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                if(isPlaying == true) {
+                    raintrack.reset();
+                    wavestrack.reset();
+                    cafetrack.reset();
+                    foresttrack.reset();
+                    nowplaying.removeAll(nowplaying);
+                    isPlaying = false;
+                }
+                else if (!isPlaying && nowplaying.isEmpty())
+                {
+                    Toast toast = Toast.makeText(music.this, "Nothing has been chosen or stop has cleared it.", Toast.LENGTH_LONG);
+                    toast.show();
+                }
             }
         });
         }

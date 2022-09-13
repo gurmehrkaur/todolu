@@ -1,15 +1,16 @@
 package com.example.todolu;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,7 +37,13 @@ public class registration extends AppCompatActivity
         editTextRegisterPassword = findViewById(R.id.password);
         editTextRegisterReenterpassword = findViewById(R.id.reenterpassword);
 
-
+        Button alraccbtn = findViewById(R.id.alraccount);
+        alraccbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changetologin();
+            }
+        });
 
         Button buttonRegister = findViewById(R.id.register);
         buttonRegister.setOnClickListener(new View.OnClickListener()
@@ -132,4 +139,9 @@ public class registration extends AppCompatActivity
     private void updateUI(FirebaseUser user) {
     }
 
+    private void changetologin()
+    {
+        Intent intent = new Intent(this, login.class);
+        startActivity(intent);
+    }
 }

@@ -24,8 +24,8 @@
         android:layout_height="140dp"
         android:layout_marginTop="328dp"
         android:layout_marginEnd="4dp"
-        android:scaleType="fitXY"
         android:clickable="true"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/waves" />
@@ -36,8 +36,8 @@
         android:layout_height="140dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="328dp"
-        android:scaleType="fitXY"
         android:clickable="true"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/rain" />
@@ -61,8 +61,8 @@
         android:layout_height="140dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="512dp"
-        android:scaleType="fitXY"
         android:clickable="true"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cafe" />
@@ -85,7 +85,7 @@
         android:layout_width="70dp"
         android:layout_height="32dp"
         android:layout_marginEnd="52dp"
-        android:layout_marginBottom="185dp"
+        android:layout_marginBottom="219dp"
         android:fontFamily="casual"
         android:text="Forest"
         android:textSize="20dp"
@@ -113,9 +113,9 @@
         android:layout_width="165dp"
         android:layout_height="140dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="84dp"
-        android:scaleType="fitXY"
+        android:layout_marginBottom="120dp"
         android:clickable="true"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/forest" />
@@ -139,8 +139,8 @@
         android:layout_height="117dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="92dp"
-        android:scaleType="fitXY"
         android:clickable="true"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/spotify" />
@@ -151,8 +151,8 @@
         android:layout_height="117dp"
         android:layout_marginTop="88dp"
         android:layout_marginEnd="40dp"
-        android:scaleType="fitXY"
         android:clickable="true"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/youtube" />
@@ -161,8 +161,9 @@
         android:id="@+id/playbtn"
         android:layout_width="71dp"
         android:layout_height="69dp"
-        android:layout_marginEnd="160dp"
+        android:layout_marginEnd="204dp"
         android:layout_marginBottom="4dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/play" />
@@ -171,10 +172,21 @@
         android:id="@+id/pausebtn"
         android:layout_width="65dp"
         android:layout_height="68dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="120dp"
         android:layout_marginBottom="8dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/pause" />
+
+    <ImageButton
+        android:id="@+id/stopbtn"
+        android:layout_width="47dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="?android:attr/textCursorDrawable" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
