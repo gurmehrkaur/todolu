@@ -12,10 +12,11 @@ import java.util.ArrayList;
 
 public class music extends AppCompatActivity
 {
-    ImageButton getrainbtn, getwavesbtn, getcafebtn, getforestbtn, getpausebtn, getplaybtn, getstopbtn, getspotifybtn, getyoutbtn;
-    Boolean isPlaying = false;
-    String[] songs = {"rain", "waves", "cafe", "forest"};
-    ArrayList<String> nowplaying = new ArrayList<String>();
+    private ImageButton getrainbtn, getwavesbtn, getcafebtn, getforestbtn, getpausebtn, getplaybtn, getstopbtn, getspotifybtn, getyoutbtn;
+    private Boolean isPlaying = false;
+    private String[] songs = {"rain", "waves", "cafe", "forest"};
+    private ArrayList<String> nowplaying = new ArrayList<String>();
+    private MediaPlayer playsound;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -23,41 +24,41 @@ public class music extends AppCompatActivity
         setContentView(R.layout.music);
         //sound library sounds
         getrainbtn = findViewById(R.id.rainbtn);
-        MediaPlayer raintrack = MediaPlayer.create(this, R.raw.rain_audio);
         getrainbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                raintrack.start();
+                playsound = MediaPlayer.create(music.this, R.raw.rain_audio);
+                playsound.start();
                 isPlaying = true;
                 nowplaying.add(songs[0]);
             }
         });
         getwavesbtn = findViewById(R.id.wavesbtn);
-        MediaPlayer wavestrack = MediaPlayer.create(this, R.raw.waves_audio);
         getwavesbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                wavestrack.start();
+                playsound = MediaPlayer.create(music.this, R.raw.waves_audio);
+                playsound.start();
                 isPlaying = true;
                 nowplaying.add(songs[1]);;
             }
         });
         getcafebtn = findViewById(R.id.cafebtn);
-        MediaPlayer cafetrack = MediaPlayer.create(this, R.raw.cafe_audio);
         getcafebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cafetrack.start();
+                playsound = MediaPlayer.create(music.this, R.raw.cafe_audio);
+                playsound.start();
                 isPlaying = true;
                 nowplaying.add(songs[2]);
             }
         });
         getforestbtn = findViewById(R.id.forestbtn);
-        MediaPlayer foresttrack = MediaPlayer.create(this, R.raw.forest_audio);
         getforestbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                foresttrack.start();
+                playsound = MediaPlayer.create(music.this, R.raw.forest_audio);
+                playsound.start();
                 isPlaying = true;
                 nowplaying.add(songs[3]);
             }
@@ -66,31 +67,15 @@ public class music extends AppCompatActivity
         getplaybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isPlaying == false) //if nothing is playing, check arraylist to see what is clicked
+                if (isPlaying == false && !nowplaying.isEmpty()) //if nothing is playing, check arraylist to see what is clicked
                 {
-                    if (nowplaying.contains("rain"))
-                    {
-                        raintrack.start();
-                        isPlaying = true;
-                    }
-                    if (nowplaying.contains("waves"))
-                    {
-                        wavestrack.start();
-                        isPlaying = true;
-                    }
-                    if (nowplaying.contains("cafe"))
-                    {
-                        cafetrack.start();
-                        isPlaying = true;
-                    }
-                    if (nowplaying.contains("forest"))
-                    {
-                        foresttrack.start();
-                        isPlaying = true;
-                    }
-                    else if (nowplaying.isEmpty())
-                    {
-                    }
+                  playsound.start();
+                  isPlaying = true;
+                }
+                else if (isPlaying == false && nowplaying.isEmpty())
+                {
+                    Toast toast = Toast.makeText(music.this, "Nothing has been selected to play or stop has cleared it.", Toast.LENGTH_LONG);
+                    toast.show();
                 }
                 else if (isPlaying == true)
                 {
@@ -106,26 +91,8 @@ public class music extends AppCompatActivity
             public void onClick(View view) { //when pause is clicked, check arraylist to see what is playing to pause the audio
                 if (isPlaying == true)
                 {
-                    if (nowplaying.contains("rain"))
-                    {
-                        raintrack.pause();
-                        isPlaying = false;
-                    }
-                    if (nowplaying.contains("waves"))
-                    {
-                        wavestrack.pause();
-                        isPlaying = false;
-                    }
-                    if (nowplaying.contains("cafe"))
-                    {
-                        cafetrack.pause();
-                        isPlaying = false;
-                    }
-                    if (nowplaying.contains("forest"))
-                    {
-                        foresttrack.pause();
-                        isPlaying = false;
-                    }
+                    playsound.pause();
+                    isPlaying = false;
                 }
                 else if (!isPlaying) //notification for when pause is clicked but nothing is playing
                 {
@@ -139,11 +106,10 @@ public class music extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                if(isPlaying == true) {
-                    raintrack.reset();
-                    wavestrack.reset();
-                    cafetrack.reset();
-                    foresttrack.reset();
+                if(playsound != null) {
+                    playsound.stop();
+                    playsound.release();
+                    playsound = null;
                     nowplaying.removeAll(nowplaying);
                     isPlaying = false;
                 }
