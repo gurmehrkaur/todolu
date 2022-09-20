@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "436620874973",
-    "project_id": "todolu-af889",
-    "storage_bucket": "todolu-af889.appspot.com"
+    "project_number": "445392400396",
+    "project_id": "todolu-22de5",
+    "storage_bucket": "todolu-22de5.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:436620874973:android:3253452894daf63d7cf734",
+        "mobilesdk_app_id": "1:445392400396:android:d4dfd5ea2ad060b519be29",
         "android_client_info": {
           "package_name": "com.example.todolu"
         }
       },
       "oauth_client": [
         {
-          "client_id": "436620874973-3ige9p62g8s38vgsuilgstt7adnu03qt.apps.googleusercontent.com",
+          "client_id": "445392400396-ikp00be5rf68irl6eebnt91bv0imhbom.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBOc49yBXWcjOiigGx0RZjnILRsjfdHyE4"
+          "current_key": "AIzaSyDxtPn8Gr7G7UbiFjhb4qJaVNBxJJ0JAYU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "436620874973-3ige9p62g8s38vgsuilgstt7adnu03qt.apps.googleusercontent.com",
+              "client_id": "445392400396-ikp00be5rf68irl6eebnt91bv0imhbom.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
