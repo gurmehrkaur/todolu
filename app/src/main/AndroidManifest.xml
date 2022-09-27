@@ -22,7 +22,7 @@
             android:exported="true" >
         </activity>
         <activity android:name=".profile"
-            android:theme="@style/Theme.Todolu.NoActionBar"
+            android:theme="@style/AppTheme.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

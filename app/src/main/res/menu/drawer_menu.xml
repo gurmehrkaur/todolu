@@ -26,4 +26,12 @@
             android:title="To Do" />
 
     </group>
+
+    <item android:title="Setting">
+        <menu>
+            <item android:id="@+id/nav_quit"
+                android:icon="@drawable/ic_reset"
+                android:title="Log Out"/>
+        </menu>
+    </item>
 </menu>
