@@ -37,6 +37,9 @@
         <entry key="app/src/main/res/layout/registration.xml" value="0.2900355242300725" />
         <entry key="app/src/main/res/layout/timers.xml" value="0.19067028985507245" />
         <entry key="app/src/main/res/layout/todo.xml" value="0.19067028985507245" />
+        <entry key="app/src/main/res/layout/todo_edit.xml" value="0.24087371826171877" />
+        <entry key="app/src/main/res/layout/todo_main.xml" value="0.2738723754882813" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.24635416666666668" />
       </map>
     </option>
   </component>
