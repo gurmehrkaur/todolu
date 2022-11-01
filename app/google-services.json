@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "730292592811",
+    "firebase_url": "https://todoluapp-default-rtdb.firebaseio.com",
     "project_id": "todoluapp",
     "storage_bucket": "todoluapp.appspot.com"
   },

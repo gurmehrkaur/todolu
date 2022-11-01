@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_music"
+            android:icon="@drawable/ic_music"
+            android:title="Music" />
+        <item
+            android:id="@+id/nav_calandar"
+            android:icon="@drawable/ic_calandar"
+            android:title="Calandar" />
+        <item
+            android:id="@+id/nav_timer"
+            android:icon="@drawable/ic_timer"
+            android:title="Timer" />
+        <item
+            android:id="@+id/nav_todo"
+            android:icon="@drawable/ic_todo"
+            android:title="To Do" />
+
+    </group>
+
+    <item android:title="Setting">
+        <menu>
+            <item android:id="@+id/nav_quit"
+                android:icon="@drawable/ic_reset"
+                android:title="Log Out"/>
+        </menu>
+    </item>
+</menu>
