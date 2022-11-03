@@ -25,13 +25,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="220dp"
-        android:background="@drawable/bottom_background"
-        android:backgroundTint="@color/colorAccent"
         android:visibility="visible"
         tools:visibility="visible">
-
-        <ImageView
-            android:id="@+id/imageView"
+        //android:background="@drawable/bottom_background"
+        //android:backgroundTint="@color/colorAccent"
+        <ImageButton
+            android:id="@+id/rainbtn"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_marginTop="48dp"
@@ -41,8 +40,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/rain" />
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <ImageButton
+            android:id="@+id/cafebtn"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_marginTop="48dp"
@@ -52,8 +51,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/cafe" />
 
-        <ImageView
-            android:id="@+id/imageView3"
+        <ImageButton
+            android:id="@+id/forestbtn"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_marginTop="240dp"
@@ -63,8 +62,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/forest" />
 
-        <ImageView
-            android:id="@+id/imageView4"
+        <ImageButton
+            android:id="@+id/wavesbtn"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_marginTop="240dp"
@@ -95,7 +94,7 @@
             tools:layout_editor_absoluteY="-150dp">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/stop"
+                android:id="@+id/stopbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -106,10 +105,11 @@
                 android:layout_marginEnd="277dp"
                 android:layout_marginBottom="41dp"
                 android:onClick="onStop"
-                android:src="@drawable/ic_stop" />
+                android:src="@drawable/ic_stop"/>
+
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/start"
+                android:id="@+id/playbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -120,10 +120,10 @@
                 android:layout_marginEnd="177dp"
                 android:layout_marginBottom="41dp"
                 android:onClick="onStart"
-                android:src="@drawable/ic_play" />
+                android:src="@drawable/ic_play"/>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/reset"
+                android:id="@+id/pausebtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -132,7 +132,8 @@
                 android:layout_marginEnd="77dp"
                 android:layout_marginBottom="41dp"
                 android:onClick="onReset"
-                android:src="@drawable/ic_reset" />
+                android:src="@drawable/ic_reset"/>
+
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -26,12 +26,12 @@ public class calendar extends AppCompatActivity{
         setContentView(R.layout.calendar);
         button =(Button) findViewById(R.id.create);
         button.setOnClickListener(new View.OnClickListener()
-                                  {
+        {
             @Override
             public void onClick(View v){
                 opencreate();
             }
-            });
+        });
 
         // By ID we can use each component
         // which id is assign in xml file
