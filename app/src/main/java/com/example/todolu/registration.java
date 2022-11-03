@@ -141,7 +141,7 @@ public class registration extends AppCompatActivity
                     hashMap.put("firstname", textFirstname);
                     hashMap.put("lastname", textLastname);
                     hashMap.put("email", textEmail);
-                    hashMap.put("imageurl", "gs://todoluapp.appspot.com/nopfp.png");
+                    hashMap.put("imageurl", "https://firebasestorage.googleapis.com/v0/b/todoluapp.appspot.com/o/nopfp.png?alt=media&token=4ed9d20e-7a5d-46ec-800b-8857223b6de9");
                     hashMap.get("imageurl");
                     reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -149,7 +149,7 @@ public class registration extends AppCompatActivity
                             Toast.makeText(registration.this, "Registration Successful.",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(user);
-                            Intent intent = new Intent(registration.this, editprofile.class);
+                            Intent intent = new Intent(registration.this, home.class);
                             startActivity(intent);
                         }
                     });

@@ -61,6 +61,12 @@ public class home extends AppCompatActivity {
                 changetomakepost();
             }
         });
+        pfp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changetoprofile();
+            }
+        });
 
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -74,12 +80,13 @@ public class home extends AppCompatActivity {
                 firstname.setText(user.getFirstname());
                 if(user.getImageurl() != null)
                 {
-                    Glide.with(getApplicationContext()).load(user.getImageurl()).into(pfp);
+                     Glide.with(getApplicationContext()).load(user.getImageurl()).into(pfp);
                 }
                 else
                 {
                     Toast.makeText(home.this, "ooga booga", Toast.LENGTH_SHORT).show();
                 }
+
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -91,6 +98,10 @@ public class home extends AppCompatActivity {
     private void changetomakepost() {
         Intent changetopost = new Intent(this, makepost.class);
         startActivity(changetopost);
+    }
+    private void changetoprofile() {
+        Intent changetoprofile = new Intent(this, profile.class);
+        startActivity(changetoprofile);
     }
     private void changetosearch(){
         Fragment fragment = new searchuserfrag();

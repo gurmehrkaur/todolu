@@ -85,6 +85,7 @@ public class editprofile extends AppCompatActivity
                 firstname.setText(user.getFirstname());
                 lastname.setText(user.getLastname());
                 email.setText(user.getEmail());
+
                 if(user.getImageurl() != null)
                 {
                     Glide.with(getApplicationContext()).load(user.getImageurl()).into(editprofilepic);

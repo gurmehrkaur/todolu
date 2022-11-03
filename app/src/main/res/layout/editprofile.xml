@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <ImageButton
         android:id="@+id/close"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/ic_close"></ImageButton>
-
 
     <TextView
         android:id="@+id/save"

@@ -10,27 +10,22 @@
         android:id="@+id/pfpprofile"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="31dp"
+        android:layout_marginStart="9dp"
         android:src="@drawable/nopfp"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/firstnamepfp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/firstnamepfp" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/firstnamepfp"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="24dp"
-        android:text="Username"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:text="Firstname"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/editprofilepfp"
         app:layout_constraintStart_toEndOf="@+id/pfpprofile"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,26 +33,22 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="43dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="48dp"
         android:text="Posts"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView8"
         app:layout_constraintStart_toEndOf="@+id/pfpprofile"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/firstnamepfp" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="23dp"
-        android:layout_marginBottom="612dp"
         android:text="followers"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView9"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView9"
@@ -67,32 +58,28 @@
         android:text="following"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView8" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/fullnamepfp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
-        android:text="Name"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="23dp"
+        android:text="Full Name"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/pfpprofile" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="524dp"
-        android:text="Bio"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/editprofilepfp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="Edit Profile"
+        app:layout_constraintBaseline_toBaselineOf="@+id/firstnamepfp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstnamepfp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
