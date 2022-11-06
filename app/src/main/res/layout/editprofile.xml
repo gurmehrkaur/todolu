@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageButton
+        android:id="@+id/close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_close"></ImageButton>
+
+    <TextView
+        android:id="@+id/save"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="SAVE"
+        android:textColor="@color/black"
+        android:textSize="30dp"></TextView>
+
+    <TextView
+        android:layout_width="302dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="60dp"
+        android:text="Edit Profile"
+        android:textSize="30dp"
+        android:textStyle="bold"></TextView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/editpfp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/nopfp" />
+
+    <TextView
+        android:id="@+id/changepfptxt"
+        android:layout_width="302dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="60dp"
+        android:text="Change Picture"
+        android:textSize="30dp"
+        android:textStyle="bold"></TextView>
+
+    <EditText
+        android:id="@+id/editfirstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="First Name" />
+
+    <EditText
+        android:id="@+id/editlastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Last Name" />
+
+    <EditText
+        android:id="@+id/editemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Email" />
+
+
+</LinearLayout>
