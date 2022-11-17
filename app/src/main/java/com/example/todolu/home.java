@@ -80,7 +80,7 @@ public class home extends AppCompatActivity {
                 firstname.setText(user.getFirstname());
                 if(user.getImageurl() != null)
                 {
-                     Glide.with(getApplicationContext()).load(user.getImageurl()).into(pfp);
+                    Glide.with(getApplicationContext()).load(user.getImageurl()).into(pfp);
                 }
                 else
                 {

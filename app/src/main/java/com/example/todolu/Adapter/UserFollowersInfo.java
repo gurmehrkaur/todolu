@@ -1,4 +1,4 @@
-package Adapter;
+package com.example.todolu.Adapter;
 
 
 import android.content.Context;

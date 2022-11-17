@@ -30,10 +30,6 @@
             android:exported="true" >
         </activity>
         <activity
-            android:name=".home"
-            android:exported="true" >
-        </activity>
-        <activity
             android:name=".music"
             android:exported="true" >
         </activity>

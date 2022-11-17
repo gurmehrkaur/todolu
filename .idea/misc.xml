@@ -3,6 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Git/todolu/app/src/main/res/drawable/ic_calandar.xml" value="0.131" />
+        <entry key="..\:/Git/todolu/app/src/main/res/drawable/ic_home.xml" value="0.3035" />
+        <entry key="..\:/Git/todolu/app/src/main/res/drawable/ic_menu.xml" value="0.3035" />
+        <entry key="..\:/Git/todolu/app/src/main/res/drawable/ic_music.xml" value="0.131" />
+        <entry key="..\:/Git/todolu/app/src/main/res/drawable/ic_play.xml" value="0.131" />
+        <entry key="..\:/Git/todolu/app/src/main/res/drawable/ic_search.xml" value="0.131" />
+        <entry key="..\:/Git/todolu/app/src/main/res/drawable/ic_send.xml" value="0.3035" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/calendar.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/createevent.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/editprofile.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_calandar.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_todo.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/home.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/login.xml" value="0.1458966565349544" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/main.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/makepost.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/music.xml" value="0.1458966565349544" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/nav_header.xml" value="0.1458966565349544" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/profile.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/registration.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/timers.xml" value="0.1458966565349544" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/todo_edit.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/todo_main.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/user_item.xml" value="0.3" />
         <entry key="..\:/Users/ktpop/Downloads/todolu/todolu-master/app/src/main/res/layout/login.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/ktpop/Downloads/todolu/todolu-master/app/src/main/res/layout/music.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/ktpop/Downloads/todolu/todolu-master/app/src/main/res/layout/registration.xml" value="0.17552083333333332" />
