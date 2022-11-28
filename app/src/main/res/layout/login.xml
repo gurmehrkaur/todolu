@@ -42,13 +42,14 @@
 
     <Button
         android:id="@+id/login"
+        android:enabled="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="64dp"
-        android:backgroundTint="#D0D3D3"
-        android:enabled="true"
         android:text="@string/action_sign_in"
+        android:backgroundTint="#D0D3D3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

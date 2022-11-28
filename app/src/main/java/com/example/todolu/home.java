@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.todolu.fragments.AddBlogsFragment;
+import com.example.todolu.fragments.Home;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -38,7 +40,7 @@ public class home extends AppCompatActivity {
     private StorageReference storageRef;
     FirebaseUser firebaseUser;
     TextView firstname;
-
+    private Button feed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +49,15 @@ public class home extends AppCompatActivity {
 
         post = findViewById(R.id.postbtn);
         pfp = findViewById(R.id.pfphome);
+        feed = findViewById(R.id.feedview);
         firstname = findViewById(R.id.firstnamehome);
         search = findViewById(R.id.search);
+        feed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changetofeed();
+            }
+        });
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,9 +104,14 @@ public class home extends AppCompatActivity {
 
         });
     }
-    private void changetomakepost() {
+    /*private void changetomakepost() {
         Intent changetopost = new Intent(this, makepost.class);
         startActivity(changetopost);
+    }*/
+    private void changetomakepost(){
+        Fragment fragment = new AddBlogsFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.container,fragment).commit();
     }
     private void changetoprofile() {
         Intent changetoprofile = new Intent(this, profile.class);
@@ -107,5 +121,16 @@ public class home extends AppCompatActivity {
         Fragment fragment = new searchuserfrag();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.container, fragment).commit();
+    }
+    /*private void changetofeed(){
+        Home fragment = new Home();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.container, fragment).commit();
+
+    }*/
+    private void changetofeed(){
+        Fragment fragment = new Home();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.container,fragment).commit();
     }
 }

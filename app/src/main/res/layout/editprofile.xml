@@ -9,7 +9,7 @@
         android:id="@+id/close"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_close"></ImageButton>
+        android:src="@drawable/ic_music"></ImageButton>
 
     <TextView
         android:id="@+id/save"

@@ -5,7 +5,12 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.example.todolu.fragments.Home;
+
 
 import com.example.todolu.Adapter.ViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
@@ -24,6 +29,10 @@ public class main extends AppCompatActivity {
         init();
 
         addTabs();
+        Home fragment = new Home();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.viewPager, fragment, "");
+        fragmentTransaction.commit();
     }
 
     private void init(){
@@ -48,7 +57,6 @@ public class main extends AppCompatActivity {
 
         pagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pagerAdapter);
-
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
