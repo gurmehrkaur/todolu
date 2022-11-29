@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
@@ -13,20 +14,19 @@ import com.example.todolu.fragments.Notification;
 import com.example.todolu.fragments.Profile;
 import com.example.todolu.fragments.Search;
 
-public class ViewPagerAdapter extends FragmentStateAdapter {
+public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     int noOfTabs;
 
-    public ViewPagerAdapter(@NonNull FragmentManager fm, int noOfTabs) {
-        super(fm);
+    public ViewPagerAdapter(@NonNull FragmentManager fragmentActivity, int noOfTabs) {
+        super(fragmentActivity);
         this.noOfTabs = noOfTabs;
     }
 
     @NonNull
     @Override
-    public Fragment createFragment(int position) {
-
-        switch (position){
+    public Fragment getItem(int position) {
+        switch (position) {
             case 0:
                 return new Home();
             case 1:
@@ -40,11 +40,10 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
             default:
                 return null;
         }
-
     }
 
     @Override
-    public int getItemCount() {
+    public int getCount() {
         return noOfTabs;
     }
 }
