@@ -3,7 +3,7 @@
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframe)
+1. [Wireframe](#Wireframe)
 2. [Schema](#Schema)
 
 ## Overview
