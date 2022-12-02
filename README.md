@@ -3,7 +3,7 @@
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
+1. [Wireframes](#Wireframe)
 2. [Schema](#Schema)
 
 ## Overview
@@ -83,7 +83,7 @@ An Android mobile application that allows users to interact with friends and fol
 * Home &#8594; Music &#8594; Home
 * Home &#8594; Pets &#8594; Home 
 
-## Digital Wireframe
+## Wireframe
 https://www.figma.com/file/oGuW2mDhDYDlPbobB5ItvS/todolu?node-id=0%3A1
 
 ## Schema 
