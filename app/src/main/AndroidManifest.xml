@@ -73,6 +73,10 @@
             android:name=".home"
             android:exported="true" >
         </activity>
+        <activity
+            android:name=".main"
+            android:exported="true" >
+        </activity>
     </application>
 
 </manifest>

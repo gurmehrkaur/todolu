@@ -109,9 +109,9 @@ public class home extends AppCompatActivity {
         startActivity(changetopost);
     }*/
     private void changetomakepost(){
-        Fragment fragment = new AddBlogsFragment();
+        Fragment fragment1 = new AddBlogsFragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.container,fragment).commit();
+        fragmentTransaction.replace(R.id.container,fragment1).commit();
     }
     private void changetoprofile() {
         Intent changetoprofile = new Intent(this, profile.class);
@@ -129,8 +129,8 @@ public class home extends AppCompatActivity {
 
     }*/
     private void changetofeed(){
-        Fragment fragment = new Home();
+        Fragment fragment2 = new Home();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.container,fragment).commit();
+        fragmentTransaction.replace(R.id.container,fragment2).commit();
     }
 }
