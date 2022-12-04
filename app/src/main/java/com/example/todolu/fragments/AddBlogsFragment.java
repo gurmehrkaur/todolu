@@ -96,7 +96,7 @@ public class AddBlogsFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Toast.makeText(getContext(), "Failed1", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -156,7 +156,8 @@ public class AddBlogsFragment extends Fragment {
                 // not given the request for permission
                 if (which == 0) {
                     if (!checkCameraPermission()) {
-                        requestCameraPermission();
+                        pickFromCamera();
+                        //requestCameraPermission();
                     } else {
                         pickFromCamera();
                     }
@@ -259,7 +260,7 @@ public class AddBlogsFragment extends Fragment {
         String filepathname = "Posts/" + "post" + timestamp;
         Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
         byte[] data = byteArrayOutputStream.toByteArray();
 
         // initialising the storage reference for updating the data
@@ -304,7 +305,7 @@ public class AddBlogsFragment extends Fragment {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
                                     pd.dismiss();
-                                    Toast.makeText(getContext(), "Failed", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getContext(), "Failed2", Toast.LENGTH_LONG).show();
                                 }
                             });
                 }
@@ -313,7 +314,7 @@ public class AddBlogsFragment extends Fragment {
             @Override
             public void onFailure(@NonNull Exception e) {
                 pd.dismiss();
-                Toast.makeText(getContext(), "Failed", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Failed3", Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
+import androidx.fragment.app.FragmentManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.todolu.fragments.AddBlogsFragment;
 import com.example.todolu.fragments.Home;
+import com.example.todolu.searchuserfrag;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -55,19 +56,19 @@ public class home extends AppCompatActivity {
         feed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changetofeed();
+                loadfragment(new Home());
             }
         });
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changetosearch();
+                loadfragment(new searchuserfrag());
             }
         });
         post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changetomakepost();
+                loadfragment(new AddBlogsFragment());
             }
         });
         pfp.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +82,7 @@ public class home extends AppCompatActivity {
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         storageRef = FirebaseStorage.getInstance().getReference("Users/imageurl");
         //load user information
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
+        /*DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -102,35 +103,36 @@ public class home extends AppCompatActivity {
 
             }
 
-        });
+        });*/
     }
     /*private void changetomakepost() {
         Intent changetopost = new Intent(this, makepost.class);
         startActivity(changetopost);
     }*/
-    private void changetomakepost(){
-        Fragment fragment1 = new AddBlogsFragment();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.container,fragment1).commit();
+    private void loadfragment(Fragment fragment){
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.container, fragment);
+        fragmentTransaction.commit();
     }
     private void changetoprofile() {
         Intent changetoprofile = new Intent(this, profile.class);
         startActivity(changetoprofile);
-    }
+    }/*
     private void changetosearch(){
         Fragment fragment = new searchuserfrag();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.container, fragment).commit();
     }
-    /*private void changetofeed(){
+    private void changetofeed(){
         Home fragment = new Home();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.container, fragment).commit();
 
-    }*/
+    }
     private void changetofeed(){
         Fragment fragment2 = new Home();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.container,fragment2).commit();
-    }
+    }*/
 }
