@@ -58,7 +58,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainHolder> {
 
         Random random = new Random();
 
-        int color = Color.argb(255, random.nextInt(256), random.nextInt(256),random.nextInt(256))
+        int color = Color.argb(255, random.nextInt(256), random.nextInt(256),random.nextInt(256));
         Glide.with(context.getApplicationContext())
                 .load(list.get(position).getProfileImage())
                 .placeholder(R.drawable.ic_person)

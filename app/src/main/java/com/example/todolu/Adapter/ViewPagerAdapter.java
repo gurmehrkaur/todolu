@@ -13,6 +13,7 @@ import com.example.todolu.fragments.Home;
 import com.example.todolu.fragments.Notification;
 import com.example.todolu.fragments.Profile;
 import com.example.todolu.fragments.Search;
+import com.example.todolu.searchuserfrag;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
@@ -30,7 +31,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return new Home();
             case 1:
-                return new Search();
+                return new searchuserfrag();
             case 2:
                 return new Add();
             case 3:

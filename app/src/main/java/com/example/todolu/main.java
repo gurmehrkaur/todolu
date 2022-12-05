@@ -36,8 +36,6 @@ public class main extends AppCompatActivity {
     }
 
     private void init(){
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabLayout);
@@ -49,7 +47,7 @@ public class main extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_house));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_search));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_add));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_tempnoti));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_heart));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_profile));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
@@ -77,10 +75,10 @@ public class main extends AppCompatActivity {
                         tabLayout.getTabAt(0).setIcon(R.drawable.ic_add);
                         break;
                     case 3:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_tempnoti);
+                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_heart);
                         break;
                     case 4:
-                        tabLayout.getTabAt(0).setIcon(android.R.drawable.ic_menu_help);
+                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_profile);
                         break;
                 }
             }
@@ -99,10 +97,10 @@ public class main extends AppCompatActivity {
                         tabLayout.getTabAt(0).setIcon(R.drawable.ic_add);
                         break;
                     case 3:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_tempnoti);
+                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_heart);
                         break;
                     case 4:
-                        tabLayout.getTabAt(0).setIcon(android.R.drawable.ic_menu_help);
+                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_profile);
                         break;
                 }
 
@@ -122,10 +120,10 @@ public class main extends AppCompatActivity {
                         tabLayout.getTabAt(0).setIcon(R.drawable.ic_add);
                         break;
                     case 3:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_tempnoti);
+                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_heart);
                         break;
                     case 4:
-                        tabLayout.getTabAt(0).setIcon(android.R.drawable.ic_menu_help);
+                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_profile);
                         break;
                 }
 

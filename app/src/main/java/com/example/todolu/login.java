@@ -86,7 +86,7 @@ public class login extends AppCompatActivity implements View.OnClickListener{
 
                 if(task.isSuccessful()){
                     // redirect to home page
-                    startActivity(new Intent(login.this,home.class));
+                    startActivity(new Intent(login.this,main.class));
                 }
                 else{
                     Toast.makeText(login.this,"Wrong Username or Password",Toast.LENGTH_LONG).show();
