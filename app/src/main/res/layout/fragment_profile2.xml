@@ -53,41 +53,41 @@
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profileImage"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_margin="8dp"
-        app:civ_border_color="#76D1FA"
-        app:civ_border_width="1dp"
-        android:src="@drawable/nopfp" />
+            android:id="@+id/profileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            app:civ_border_color="#76D1FA"
+            app:civ_border_width="1dp"
+            android:src="@drawable/nopfp" />
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center_vertical"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/nameTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:textSize="18sp"
-            android:paddingStart="4dp"
-            android:text="Username"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-        <TextView
-            android:id="@+id/statusTv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="3"
-            android:paddingStart="4dp"
-            android:text="Student at Cal Poly Pomona"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="18sp"
+                android:paddingStart="4dp"
+                android:text="Username"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/statusTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:paddingStart="4dp"
+                android:text="Student at Cal Poly Pomona"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
-    </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -99,6 +99,7 @@
 
         <LinearLayout
             android:id="@+id/countLayout"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -189,6 +190,13 @@
             android:layout_height="wrap_content"
             >
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow"
+                android:minWidth="160dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/followBtn"/>
 
 
         </RelativeLayout>

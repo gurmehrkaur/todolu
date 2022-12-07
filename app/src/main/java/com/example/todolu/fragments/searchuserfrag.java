@@ -1,4 +1,4 @@
-package com.example.todolu;
+package com.example.todolu.fragments;
 
 import android.os.Bundle;
 
@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.todolu.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;

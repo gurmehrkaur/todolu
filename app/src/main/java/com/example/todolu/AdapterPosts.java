@@ -203,10 +203,10 @@ public class AdapterPosts extends RecyclerView.Adapter<com.example.todolu.Adapte
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.child(pid).hasChild(myuid)) {
-                    holder.likebtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.like, 0, 0, 0);
+                    //holder.likebtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.like, 0, 0, 0);
                     holder.likebtn.setText("Liked");
                 } else {
-                    holder.likebtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.like, 0, 0, 0);
+                    //holder.likebtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.like, 0, 0, 0);
                     holder.likebtn.setText("Like");
                 }
             }

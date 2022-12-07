@@ -45,80 +45,11 @@ public class Profile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        return view;
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        init(view);
-
-        loadBasicData();
-
-    }
-
-    private void loadBasicData() {
-
-        DocumentReference userRef = FirebaseFirestore.getInstance().collection("Users")
-                .document(user.getUid());
-
-        userRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-
-                if(error != null)
-                    return;
-                assert value != null;
-                if(value.exists()){
-
-                    String name = value.getString("name");
-                    String status = value.getString("status");
-                    int followers = value.getLong("followers").intValue();
-                    int following = value.getLong("following").intValue();
-
-                    String profileURL = value.getString("image");
-
-                    nameTv.setText(name);
-                    toolbarNameTv.setText(name);
-                    statusTv.setText(status);
-                    followersCountTv.setText(String.valueOf(followers));
-                    followingCountTv.setText(String.valueOf(following));
-
-                    Glide.with(getContext().getApplicationContext())
-                            .load(profileURL)
-                            .placeholder(R.drawable.ic_person)
-                            .timeout(6500)
-                            .into(profileImage);
-
-
-                }
-
-            }
-        });
-
-
-    }
-
-    private void init(View view){
-
-        Toolbar toolbar = view.findViewById(R.id.toolbar);
-        assert getActivity() != null;
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
-
-        nameTv = view.findViewById(R.id.nameTv);
-        statusTv = view.findViewById(R.id.statusTv);
-        toolbarNameTv = view.findViewById(R.id.toolbarNameTV);
-        followersCountTv = view.findViewById(R.id.followersCountTv);
-        followingCountTv = view.findViewById(R.id.followingCountTv);
-        postCountTv = view.findViewById(R.id.postCountTv);
-        profileImage = view.findViewById(R.id.profileImage);
-        followBtn = view.findViewById(R.id.followBtn);
-        recyclerView = view.findViewById(R.id.recyclerView);
-
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        user = auth.getCurrentUser();
-    }
 
 }

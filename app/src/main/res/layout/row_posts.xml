@@ -108,8 +108,8 @@
             android:layout_height="1dp"
             android:background="#F5F0F0" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
@@ -122,7 +122,7 @@
                 android:autoLink="all"
                 android:background="@color/colorWhite"
                 android:padding="5dp"
-                android:text="Like" />
+                android:text="LIKE" />
 
             <Button
                 android:id="@+id/comment"
@@ -130,11 +130,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:autoLink="all"
-
                 android:background="@color/colorWhite"
                 android:padding="5dp"
-                android:text="COMMENT" />
-        </LinearLayout>
+                android:text="COMMENT"
+                android:layout_alignParentEnd="true"
+
+                />
+        </RelativeLayout>
 
     </LinearLayout>
 

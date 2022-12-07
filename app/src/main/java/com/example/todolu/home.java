@@ -18,7 +18,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.todolu.fragments.AddBlogsFragment;
 import com.example.todolu.fragments.Home;
-import com.example.todolu.searchuserfrag;
+import com.example.todolu.fragments.searchuserfrag;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;

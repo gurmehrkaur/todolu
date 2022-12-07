@@ -27,6 +27,8 @@
         <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_music.xml" value="0.284375" />
         <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_notification.xml" value="0.284375" />
         <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_profile.xml" value="0.19675925925925927" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_profile2.xml" value="0.18342391304347827" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_search.xml" value="0.1458966565349544" />
         <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_search2.xml" value="0.284375" />
         <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_timer.xml" value="0.284375" />
         <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_todo.xml" value="0.3" />
@@ -41,11 +43,13 @@
         <entry key="..\:/Git/todolu/app/src/main/res/layout/pets.xml" value="0.284375" />
         <entry key="..\:/Git/todolu/app/src/main/res/layout/profile.xml" value="0.3" />
         <entry key="..\:/Git/todolu/app/src/main/res/layout/registration.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/row_posts.xml" value="0.264" />
+        <entry key="..\:/Git/todolu/app/src/main/res/layout/row_posts.xml" value="0.2" />
         <entry key="..\:/Git/todolu/app/src/main/res/layout/timers.xml" value="0.1" />
         <entry key="..\:/Git/todolu/app/src/main/res/layout/todo_edit.xml" value="0.3" />
         <entry key="..\:/Git/todolu/app/src/main/res/layout/todo_main.xml" value="0.3" />
         <entry key="..\:/Git/todolu/app/src/main/res/layout/user_item.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/menu/drawer_menu.xml" value="0.3" />
+        <entry key="..\:/Git/todolu/app/src/main/res/menu/main.xml" value="0.3" />
         <entry key="..\:/Users/ktpop/Downloads/todolu/todolu-master/app/src/main/res/layout/login.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/ktpop/Downloads/todolu/todolu-master/app/src/main/res/layout/music.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/ktpop/Downloads/todolu/todolu-master/app/src/main/res/layout/registration.xml" value="0.17552083333333332" />

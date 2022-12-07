@@ -2,18 +2,15 @@ package com.example.todolu.Adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.lifecycle.Lifecycle;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.todolu.fragments.Add;
+import com.example.todolu.fragments.AddBlogsFragment;
 import com.example.todolu.fragments.Home;
 import com.example.todolu.fragments.Notification;
 import com.example.todolu.fragments.Profile;
-import com.example.todolu.fragments.Search;
-import com.example.todolu.searchuserfrag;
+import com.example.todolu.fragments.searchuserfrag;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
@@ -33,7 +30,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return new searchuserfrag();
             case 2:
-                return new Add();
+                return new AddBlogsFragment();
             case 3:
                 return new Notification();
             case 4:
