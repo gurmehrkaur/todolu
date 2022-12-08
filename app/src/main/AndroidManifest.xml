@@ -75,6 +75,7 @@
 
         </activity>
         <activity
+            android:theme="@style/AppTheme.NoActionBar"
             android:name=".main"
             android:exported="true" >
 
