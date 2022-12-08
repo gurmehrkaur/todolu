@@ -88,38 +88,74 @@ https://www.figma.com/file/oGuW2mDhDYDlPbobB5ItvS/todolu?node-id=0%3A1
 
 ## Schema 
 ### Models
-#### DoubleStat
+#### Login
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | statTitle1         | String     | Title of the first statistic                        |
-   | statTitle2     | String   | Title of the second statistic                             |
-   | stat1        | Number   | The first statistic   |
-   | stat2      | Number   | The second statistic |
+   | noaccount         | string     | redirection to login page if no account is associated with user                      |
+   | editpassword     | string  | ability to edit password if forgotten or outdated                             |
+   | editusername        | string   | ability to edit username is forgotten or oudated   |
    
-   #### State
+   #### Registration
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | stateName         | String     | Title of the first statistic                        |
-   | deathCount     | Number   | Number of deaths                             |
-   | recoveredCount        | Number   | Number of patients recovered   |
-   | infectedCount      | Number   | Number of patients infected |
-   | stateImage | Image | An image of the state |
+   | firstname        | string     | user's first name                       |
+   | lastname     | string   | user's last name                      |
+   | email        | string   | user's email   |
+   | password      | string   | user's password |
+   | reenterpassword | string | user's reentered password checked for verification |
    
-### Networking
+    #### To Do List
 
-* screen name
-  * website used
-  * (request method) explanation 
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | buttonadd       | string     | button to add item onto to do list                        |
+   | etitem     | string   | added item text                              |
+   | rvitems       | string   | removed item text   |
+   
+   #### Profile
 
-* screen name
-  * website used
-  * (request method) explanation 
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | pfp       | string     | current saved user profile picture                         |
+   | storageref     | string   | current and past profile picture image url                            |
+   | editprofile       | string   | gallery images url   |
+   | firstname     | string   | user's first name when searched up |
+   | fullname     | string   | user's full name when searched up |
+   
+    #### Music
 
-* screen name
-  * website used
-  * (request method) explanation  
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | getrainbtn      | button     | when pressed plays rain sounds                        |
+   | getcafebtn     | button   | when pressed plays cafe sounds                            |
+   | getforestbtn      | button   | when pressed plays forest sounds   |
+   | getspotifybtn     | button     | when pressed takes the user to spotify to login and listen to music                       |
+   | getyoutbtn     | button   | when pressed takes the user to youtube to login and listen to music                             |
+   
+   #### Calendar
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | cal      | integer     | number of month                        |
+   | dateview    | integer   | number of date                              |
+   
+   #### Home
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | post       | string     | name of user who posted                       |
+   | search     | string   | text to search up user by email                             |
+   | imageurl       | string   | post url   |
+   
+   #### Timers
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | seconds      | integer    | number of seconds left on stopwatch                        |
+   | running    | boolean   | denotes whether timer or stopwatch is running in current time                            |
+   | wasrunning       | boolean   | denoes whethee timer or stopwatch was the last one running   |
    
 ### Resources 
 - paste website links
