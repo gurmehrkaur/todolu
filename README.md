@@ -158,4 +158,10 @@ https://www.figma.com/file/oGuW2mDhDYDlPbobB5ItvS/todolu?node-id=0%3A1
    | wasrunning       | boolean   | denoes whethee timer or stopwatch was the last one running   |
    
 ### Resources 
-- paste website links
+- https://stackoverflow.com/questions/35882752/how-to-create-a-login-database-in-android)
+- https://developer.android.com/reference/android/widget/CalendarView
+- https://developer.ibm.com/articles/os-android-devel/
+- https://firebase.google.com/
+- https://developer.android.com/reference/java/util/Timer
+- https://developer.android.com/guide/fragments
+- https://developer.android.com/develop/ui/views/layout/recyclerview?gclid=Cj0KCQiAkMGcBhCSARIsAIW6d0BLGE6GST_bcQkaUaHN5xw1eL-mvX4G9p-gh2J4vIP92ztCPpn8xh4aAn5nEALw_wcB&gclsrc=aw.ds
