@@ -183,16 +183,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/followLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-
-
-        </RelativeLayout>
-
     </RelativeLayout>
 
     <View
@@ -207,6 +197,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/view"/>
+        android:layout_below="@id/view" />
 
 </RelativeLayout>

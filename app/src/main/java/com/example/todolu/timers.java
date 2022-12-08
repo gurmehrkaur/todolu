@@ -21,10 +21,13 @@ public class timers extends AppCompatActivity {
     private boolean running;
     private boolean wasRunning;
 
-    public static long START_TIME_IN_MILLIS = 600000;
+    private long START_TIME_IN_MILLIS = 900000;
     CountDownTimer countDownTimer;
-    public long mTimeLeftInMillis = START_TIME_IN_MILLIS;
+    private boolean mRunning = false;
+    private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
     public int count = 1;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,13 +44,12 @@ public class timers extends AppCompatActivity {
         runTimer();
     }
 
-
-    public void onTimerStart(View view) {countDownTimer.start();}
+    public void onTimerStart(View view) {countDownTimer.start();
+    }
     public void onTimerStop(View view) {countDownTimer.cancel();}
     public void onTimerReset(View view) {
         countDownTimer.onFinish();
     }
-
 
     public void onStart(View view){running = true;}
     public void onStop(View view){
@@ -120,23 +122,19 @@ public class timers extends AppCompatActivity {
                 @Override
                 public void onTick(long millisUntilFinished) {
 
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            mTimeLeftInMillis = millisUntilFinished;
-                            int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
-                            int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
+                    mTimeLeftInMillis = millisUntilFinished;
+                    int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
+                    int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
 
-                            String timeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
-                            timerView.setText((timeLeftFormatted));
-                        }
-                    });
+                    String timeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
+                    timerView.setText((timeLeftFormatted));
+
                 }
 
                 @Override
                 public void onFinish() {
                     if(count == 0) {
-                        mTimeLeftInMillis = 600000;
+                        mTimeLeftInMillis = 900000;
                         int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
                         int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
 
