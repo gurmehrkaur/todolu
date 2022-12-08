@@ -165,7 +165,7 @@ public class Profile extends Fragment {
         followersCountTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), followers.class);
+                Intent intent = new Intent(getContext(), com.example.todolu.followers.class);
                 intent.putExtra("id", profileid);
                 intent.putExtra("location", "followers");
                 startActivity(intent);
@@ -174,7 +174,7 @@ public class Profile extends Fragment {
         followingCountTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), followers.class);
+                Intent intent = new Intent(getContext(), com.example.todolu.followers.class);
                 intent.putExtra("id", profileid);
                 intent.putExtra("location", "following");
                 startActivity(intent);
