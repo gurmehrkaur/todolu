@@ -32,8 +32,6 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 2:
                 return new AddBlogsFragment();
             case 3:
-                return new Notification();
-            case 4:
                 return new Profile();
             default:
                 return null;

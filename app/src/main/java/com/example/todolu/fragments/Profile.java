@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.todolu.R;
+import com.example.todolu.editprofile;
 import com.example.todolu.followers;
 import com.example.todolu.profile;
 import com.google.firebase.auth.FirebaseAuth;
@@ -85,6 +86,7 @@ public class Profile extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
         followersCountTv = view.findViewById(R.id.followersCountTv);
         followingCountTv = view.findViewById(R.id.followingCountTv);
+        editprofile = view.findViewById(R.id.editprofilepfp);
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
@@ -178,6 +180,12 @@ public class Profile extends Fragment {
                 startActivity(intent);
             }
         });
+        editprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent changetoeditprofile = new Intent(getContext(), com.example.todolu.editprofile.class);
+                startActivity(changetoeditprofile);            }
+        });
         return view;
     }
 
@@ -190,6 +198,7 @@ public class Profile extends Fragment {
         loadBasicData();
 
     }
+
 
     private void loadBasicData() {
         DocumentReference userRef = FirebaseFirestore.getInstance().collection("Users")

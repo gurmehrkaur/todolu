@@ -47,7 +47,6 @@ public class main extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_house));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_search));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_add));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_heart));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_profile));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
@@ -75,9 +74,6 @@ public class main extends AppCompatActivity {
                         tabLayout.getTabAt(0).setIcon(R.drawable.ic_add);
                         break;
                     case 3:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_heart);
-                        break;
-                    case 4:
                         tabLayout.getTabAt(0).setIcon(R.drawable.ic_profile);
                         break;
                 }
@@ -97,9 +93,6 @@ public class main extends AppCompatActivity {
                         tabLayout.getTabAt(0).setIcon(R.drawable.ic_add);
                         break;
                     case 3:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_heart);
-                        break;
-                    case 4:
                         tabLayout.getTabAt(0).setIcon(R.drawable.ic_profile);
                         break;
                 }
@@ -120,9 +113,6 @@ public class main extends AppCompatActivity {
                         tabLayout.getTabAt(0).setIcon(R.drawable.ic_add);
                         break;
                     case 3:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.ic_heart);
-                        break;
-                    case 4:
                         tabLayout.getTabAt(0).setIcon(R.drawable.ic_profile);
                         break;
                 }

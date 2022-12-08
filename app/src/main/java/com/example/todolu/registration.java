@@ -45,14 +45,6 @@ public class registration extends AppCompatActivity
         editTextRegisterPassword = findViewById(R.id.password);
         editTextRegisterReenterpassword = findViewById(R.id.reenterpassword);
 
-        Button alraccbtn = findViewById(R.id.alraccount);
-        alraccbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                changetologin();
-            }
-        });
-
         Button buttonRegister = findViewById(R.id.register);
         buttonRegister.setOnClickListener(new View.OnClickListener()
         {
@@ -113,7 +105,7 @@ public class registration extends AppCompatActivity
                     editTextRegisterReenterpassword.setError("Password does not match");
                     editTextRegisterReenterpassword.requestFocus();
                 }
-                 //register
+                //register
                 {
                     registerUser(textFirstname, textLastname, textEmail, textPassword, textReenterpassword);
                 }

@@ -27,9 +27,11 @@
                 android:id="@+id/picturetv"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/nopfp"/>
 
             <LinearLayout
+                android:layout_marginLeft="16dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -60,6 +62,7 @@
         </LinearLayout>
 
         <TextView
+            android:layout_marginTop="16dp"
             android:id="@+id/ptitletv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,12 +78,15 @@
             android:textColor="@color/colorBlack" />
 
         <ImageView
+            android:layout_marginTop="16dp"
             android:id="@+id/pimagetv"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite" />
+            android:layout_height="220dp"
+            android:background="#ff0000" />
+
 
         <LinearLayout
+            android:layout_marginTop="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -109,6 +115,7 @@
             android:background="#F5F0F0" />
 
         <RelativeLayout
+            android:layout_marginTop="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"

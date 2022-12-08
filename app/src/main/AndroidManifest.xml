@@ -34,6 +34,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:theme="@style/AppTheme.NoActionBar"
             android:name=".music"
             android:exported="true" >
 
@@ -45,8 +46,10 @@
         <activity
             android:name=".makepost"
             android:exported="true" >
+
         </activity>
         <activity
+            android:theme="@style/AppTheme.NoActionBar"
             android:name=".calendar"
             android:exported="true" >
         </activity>
@@ -56,11 +59,13 @@
 
         </activity>
         <activity
+            android:theme="@style/AppTheme.NoActionBar"
             android:name=".timers"
             android:exported="true" >
 
         </activity>
         <activity
+            android:theme="@style/AppTheme.NoActionBar"
             android:name=".editprofile"
             android:exported="true" >
         </activity>
