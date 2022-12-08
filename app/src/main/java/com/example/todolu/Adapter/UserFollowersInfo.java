@@ -2,6 +2,7 @@ package com.example.todolu.Adapter;
 
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -85,6 +86,14 @@ public class UserFollowersInfo extends RecyclerView.Adapter<UserFollowersInfo.Vi
                     FirebaseDatabase.getInstance().getReference("Users").child(user.getId())
                             .child("followers").child(firebaseUser.getUid()).removeValue();
                 }
+            }
+        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = currentcontext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("profileid", user.getId());
+                editor.apply();
             }
         });
     }
