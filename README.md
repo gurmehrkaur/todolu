@@ -106,7 +106,7 @@ https://www.figma.com/file/oGuW2mDhDYDlPbobB5ItvS/todolu?node-id=0%3A1
    | password      | string   | user's password |
    | reenterpassword | string | user's reentered password checked for verification |
    
-    #### To Do List
+   #### To Do List
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
@@ -124,7 +124,7 @@ https://www.figma.com/file/oGuW2mDhDYDlPbobB5ItvS/todolu?node-id=0%3A1
    | firstname     | string   | user's first name when searched up |
    | fullname     | string   | user's full name when searched up |
    
-    #### Music
+   #### Music
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
