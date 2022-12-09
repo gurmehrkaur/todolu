@@ -105,7 +105,7 @@ public class registration extends AppCompatActivity
                     editTextRegisterReenterpassword.setError("Password does not match");
                     editTextRegisterReenterpassword.requestFocus();
                 }
-                 //register
+                //register
                 {
                     registerUser(textFirstname, textLastname, textEmail, textPassword, textReenterpassword);
                 }

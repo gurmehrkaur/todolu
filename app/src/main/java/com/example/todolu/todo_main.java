@@ -20,10 +20,10 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 public class todo_main extends AppCompatActivity {
 
-    public static final String KEY_ITEM_TEXT = "item_text";
+    /*public static final String KEY_ITEM_TEXT = "item_text";
     public static final String KEY_ITEM_POSITION = "item_position";
     public static final int EDIT_TEXT_CODE = 20;
 
@@ -115,5 +115,5 @@ public class todo_main extends AppCompatActivity {
         } catch (IOException e) {
             Log.e("todo_main", "Error writing items", e);
         }
-    }
+    }*/
 }

@@ -8,49 +8,50 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="410dp"
+            android:layout_height="130dp"
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/pfphome"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="50dp"
                 android:src="@drawable/nopfp" />
 
             <TextView
-                android:layout_width="357dp"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_width="260dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="55dp"
                 android:text="username"
                 android:textSize="30dp"></TextView>
 
         </LinearLayout>
+
         <ImageView
+            android:id="@+id/ic_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/ic_home"
-            android:src="@mipmap/ic_launcher"
-            />
+            android:src="@mipmap/ic_launcher" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp">
+            android:padding="30dp">
 
             <ImageView
                 android:id="@+id/like"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:layout_marginStart="25dp"
                 android:src="@drawable/like"></ImageView>
 
             <ImageView
                 android:id="@+id/comment"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/comment"
+                android:layout_marginStart="10dp"
                 android:layout_toEndOf="@+id/like"
-                android:layout_marginStart="8dp"></ImageView>
+                android:src="@drawable/comment"></ImageView>
         </RelativeLayout>
 
     </LinearLayout>

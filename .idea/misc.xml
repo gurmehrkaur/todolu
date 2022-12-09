@@ -3,62 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Git/todolu/app/src/main/res/drawable/ic_music.xml" value="0.1" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/calendar.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_calandar.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_home.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_music.xml" value="0.24791666666666667" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_timer.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/fragment_todo.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/home.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/login.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/music.xml" value="0.22826086956521738" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/nav_header.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/pets.xml" value="0.22826086956521738" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/profile.xml" value="0.2" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/registration.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/timers.xml" value="0.22826086956521738" />
-        <entry key="..\:/Git/todolu/app/src/main/res/layout/todo.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/menu/drawer_menu.xml" value="0.3" />
-        <entry key="..\:/Git/todolu/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.177" />
-        <entry key="..\:/Git/todolu/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.177" />
-        <entry key="..\:/Users/leohe/StudioProjects/todolu/app/src/main/res/layout/calendar.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/leohe/StudioProjects/todolu/app/src/main/res/layout/home.xml" value="0.13703140830800406" />
-        <entry key="..\:/Users/leohe/StudioProjects/todolu/app/src/main/res/layout/login.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/leohe/StudioProjects/todolu/app/src/main/res/layout/music.xml" value="0.13703140830800406" />
-        <entry key="..\:/Users/leohe/StudioProjects/todolu/app/src/main/res/layout/registration.xml" value="0.358695652173913" />
-        <entry key="app/src/main/res/drawable/ic_menu.xml" value="0.182" />
-        <entry key="app/src/main/res/drawable/ic_music.xml" value="0.182" />
-        <entry key="app/src/main/res/drawable/ic_play.xml" value="0.182" />
-        <entry key="app/src/main/res/drawable/ic_reset.xml" value="0.182" />
-        <entry key="app/src/main/res/drawable/ic_stop.xml" value="0.182" />
-        <entry key="app/src/main/res/drawable/ic_timer.xml" value="0.182" />
-        <entry key="app/src/main/res/drawable/ic_todo.xml" value="0.182" />
-        <entry key="app/src/main/res/drawable/logo.xml" value="0.1415" />
+        <entry key="..\:/Users/ktpop/Downloads/todolu/todolu-master/app/src/main/res/layout/login.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ktpop/Downloads/todolu/todolu-master/app/src/main/res/layout/music.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ktpop/Downloads/todolu/todolu-master/app/src/main/res/layout/registration.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/drawable/ic_menu.xml" value="0.1" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/drawable/ic_music.xml" value="0.1785" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/calendar.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/createevent.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/editprofile.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/fragment_calandar.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/fragment_search.xml" value="0.1" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/home.xml" value="0.1" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/login.xml" value="0.22" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/makepost.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/music.xml" value="0.22" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/profile.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/registration.xml" value="0.1" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/timers.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ktpop/StudioProjects/startingfrommusicapi/app/src/main/res/layout/user_item.xml" value="0.17447916666666666" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.29347826086956524" />
-        <entry key="app/src/main/res/layout/calendar.xml" value="0.32211151123046877" />
-        <entry key="app/src/main/res/layout/createevent.xml" value="0.2942708333333333" />
-        <entry key="app/src/main/res/layout/editprofile.xml" value="0.2942708333333333" />
-        <entry key="app/src/main/res/layout/fragment_calandar.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_music.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.2875" />
-        <entry key="app/src/main/res/layout/fragment_timer.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_todo.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/calendar.xml" value="0.19067028985507245" />
         <entry key="app/src/main/res/layout/home.xml" value="0.19067028985507245" />
-        <entry key="app/src/main/res/layout/login.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/makepost.xml" value="0.21890258789062506" />
-        <entry key="app/src/main/res/layout/music.xml" value="0.3001907348632813" />
-        <entry key="app/src/main/res/layout/nav_header.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/login.xml" value="0.24154649817425292" />
+        <entry key="app/src/main/res/layout/music.xml" value="0.19067028985507245" />
         <entry key="app/src/main/res/layout/pets.xml" value="0.19067028985507245" />
         <entry key="app/src/main/res/layout/profile.xml" value="0.19067028985507245" />
-        <entry key="app/src/main/res/layout/registration.xml" value="0.31120147705078127" />
-        <entry key="app/src/main/res/layout/timers.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/registration.xml" value="0.2900355242300725" />
+        <entry key="app/src/main/res/layout/timers.xml" value="0.19067028985507245" />
         <entry key="app/src/main/res/layout/todo.xml" value="0.19067028985507245" />
-        <entry key="app/src/main/res/layout/todo_edit.xml" value="0.24087371826171877" />
-        <entry key="app/src/main/res/layout/todo_main.xml" value="0.2738723754882813" />
-        <entry key="app/src/main/res/layout/user_item.xml" value="0.2942708333333333" />
-        <entry key="app/src/main/res/menu/main.xml" value="0.24635416666666668" />
       </map>
     </option>
   </component>
@@ -67,8 +39,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="SuppressKotlinCodeStyleNotification">
-    <option name="disableForAll" value="true" />
   </component>
 </project>

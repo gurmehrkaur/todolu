@@ -10,7 +10,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class todo_edit extends AppCompatActivity {
-
+/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +41,6 @@ public class todo_edit extends AppCompatActivity {
                 items.add("Second Item");
             }
         }
-    }
+    }*/
 }
 

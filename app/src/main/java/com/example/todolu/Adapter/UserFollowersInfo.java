@@ -1,7 +1,8 @@
-package Adapter;
+package com.example.todolu.Adapter;
 
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,11 @@ public class UserFollowersInfo extends RecyclerView.Adapter<UserFollowersInfo.Vi
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         final User user = mUsers.get(position);
 
+        holder.btn_follow.setVisibility(View.VISIBLE);
+        isFollowing(user.getId(), holder.btn_follow);
+
+        holder.email.setText(user.getEmail());
+        holder.firstname.setText(user.getFirstname());
         Glide.with(currentcontext).load(user.getImageurl()).into(holder.pfp);
 
         //if user is on their profile, follow btn will not appear
@@ -67,19 +73,27 @@ public class UserFollowersInfo extends RecyclerView.Adapter<UserFollowersInfo.Vi
                 if (holder.btn_follow.getText().toString().equals("follow"))
                 {
                     //follower and followee will get added under followers in database
-                    FirebaseDatabase.getInstance().getReference().child("Follow").child(firebaseUser.getUid())
+                    FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid())
                             .child("following").child(user.getId()).setValue(true);
-                    FirebaseDatabase.getInstance().getReference().child("Follow").child(user.getId())
+                    FirebaseDatabase.getInstance().getReference("Users").child(user.getId())
                             .child("followers").child(firebaseUser.getUid()).setValue(true);
                     addNotification(user.getId());
                 }
-                else //unfollow
+                else //unfollow - removing following and follower
                 {
-                    FirebaseDatabase.getInstance().getReference().child("Follow").child(firebaseUser.getUid())
+                    FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid())
                             .child("following").child(user.getId()).removeValue();
-                    FirebaseDatabase.getInstance().getReference().child("Follow").child(user.getId())
+                    FirebaseDatabase.getInstance().getReference("Users").child(user.getId())
                             .child("followers").child(firebaseUser.getUid()).removeValue();
                 }
+            }
+        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = currentcontext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+                editor.putString("profileid", user.getId());
+                editor.apply();
             }
         });
     }
@@ -101,7 +115,7 @@ public class UserFollowersInfo extends RecyclerView.Adapter<UserFollowersInfo.Vi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        public TextView username;
+        public TextView email;
         public TextView firstname;
         public CircleImageView pfp;
         public Button btn_follow;
@@ -109,8 +123,8 @@ public class UserFollowersInfo extends RecyclerView.Adapter<UserFollowersInfo.Vi
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            username = itemView.findViewById(R.id.username);
-            firstname = itemView.findViewById(R.id.firstname);
+            email = itemView.findViewById(R.id.emailitem);
+            firstname = itemView.findViewById(R.id.firstnameitem);
             pfp = itemView.findViewById(R.id.userpfp);
             btn_follow = itemView.findViewById(R.id.follow);
         }
@@ -119,8 +133,8 @@ public class UserFollowersInfo extends RecyclerView.Adapter<UserFollowersInfo.Vi
 
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference()
-                .child("Follow").child(firebaseUser.getUid()).child("following");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users")
+                .child(firebaseUser.getUid()).child("following");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
