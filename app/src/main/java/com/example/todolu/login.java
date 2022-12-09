@@ -20,9 +20,9 @@ import android.widget.Toast;
 
 
 public class login extends AppCompatActivity implements View.OnClickListener{
-    private TextView noaccount;
     private EditText editpassword,editusername;
     private Button login;
+    private Button noaccount;
     private FirebaseAuth mAuth;
     private ProgressBar progressbar;
 
@@ -31,7 +31,7 @@ public class login extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        noaccount = (TextView) findViewById(R.id.noaccount);
+        noaccount = (Button) findViewById(R.id.noaccount);
         noaccount.setOnClickListener(this);
 
         login = (Button) findViewById(R.id.login);

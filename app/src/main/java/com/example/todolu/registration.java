@@ -37,7 +37,6 @@ public class registration extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration);
 
-        getSupportActionBar().setTitle("Register");
 
         editTextRegisterFirstname = findViewById(R.id.firstname);
         editTextRegisterLastname = findViewById(R.id.lastname);
