@@ -141,7 +141,7 @@ public class registration extends AppCompatActivity
                             Toast.makeText(registration.this, "Registration Successful.",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(user);
-                            Intent intent = new Intent(registration.this, home.class);
+                            Intent intent = new Intent(registration.this, main.class);
                             startActivity(intent);
                         }
                     });

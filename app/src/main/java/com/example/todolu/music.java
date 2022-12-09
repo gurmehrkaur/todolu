@@ -97,22 +97,22 @@ public class music extends AppCompatActivity
             public void onClick(View view) {
                 if (isPlaying == false) //if nothing is playing, check arraylist to see what is clicked
                 {
-                    if (nowplaying.contains("rain"))
+                    if (nowplaying.contains("rain_thumbnail"))
                     {
                         raintrack.start();
                         isPlaying = true;
                     }
-                    if (nowplaying.contains("waves"))
+                    if (nowplaying.contains("waves_thumbnail"))
                     {
                         wavestrack.start();
                         isPlaying = true;
                     }
-                    if (nowplaying.contains("cafe"))
+                    if (nowplaying.contains("cafe_thumbnail"))
                     {
                         cafetrack.start();
                         isPlaying = true;
                     }
-                    if (nowplaying.contains("forest"))
+                    if (nowplaying.contains("forest_thumbnail"))
                     {
                         foresttrack.start();
                         isPlaying = true;
@@ -135,22 +135,22 @@ public class music extends AppCompatActivity
             public void onClick(View view) { //when pause is clicked, check arraylist to see what is playing to pause the audio
                 if (isPlaying == true)
                 {
-                    if (nowplaying.contains("rain"))
+                    if (nowplaying.contains("rain_thumbnail"))
                     {
                         raintrack.pause();
                         isPlaying = false;
                     }
-                    if (nowplaying.contains("waves"))
+                    if (nowplaying.contains("waves_thumbnail"))
                     {
                         wavestrack.pause();
                         isPlaying = false;
                     }
-                    if (nowplaying.contains("cafe"))
+                    if (nowplaying.contains("cafe_thumbnail"))
                     {
                         cafetrack.pause();
                         isPlaying = false;
                     }
-                    if (nowplaying.contains("forest"))
+                    if (nowplaying.contains("forest_thumbnail"))
                     {
                         foresttrack.pause();
                         isPlaying = false;
