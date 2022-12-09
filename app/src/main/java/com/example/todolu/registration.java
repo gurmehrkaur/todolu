@@ -43,7 +43,15 @@ public class registration extends AppCompatActivity
         editTextRegisterEmail = findViewById(R.id.email);
         editTextRegisterPassword = findViewById(R.id.password);
         editTextRegisterReenterpassword = findViewById(R.id.reenterpassword);
-
+        //redirect to login pg
+        Button gotologin = findViewById(R.id.backToLogin);
+        gotologin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changetologin();
+            }
+        });
+        //registration
         Button buttonRegister = findViewById(R.id.register);
         buttonRegister.setOnClickListener(new View.OnClickListener()
         {
