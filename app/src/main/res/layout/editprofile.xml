@@ -43,8 +43,6 @@
 
 
 
-
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/editpfp"
         android:layout_width="200dp"
