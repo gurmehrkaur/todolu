@@ -2,10 +2,12 @@ package com.example.todolu;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 public class music extends AppCompatActivity
 {
     ImageButton getrainbtn, getwavesbtn, getcafebtn, getforestbtn, getpausebtn, getplaybtn, getstopbtn, getspotifybtn, getyoutbtn;
+    ImageView spotifybtn, ytbtn;
     Boolean isPlaying = false;
     String[] songs = {"rain_thumbnail", "waves_thumbnail", "cafe_thumbnail", "forest_"};
     ArrayList<String> nowplaying = new ArrayList<String>();
@@ -23,6 +26,28 @@ public class music extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.music);
+
+        //spotify button redirect
+        spotifybtn = findViewById(R.id.spotifybtn);
+        spotifybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://spotify.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        //youtube button redirect
+        ytbtn = findViewById(R.id.ytbtn);
+        ytbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://www.youtube.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
 
         //sound library sounds
         getrainbtn = findViewById(R.id.rainbtn);

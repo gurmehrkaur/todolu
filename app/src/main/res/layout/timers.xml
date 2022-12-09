@@ -14,11 +14,21 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/stopwatchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stopwatch"
+            android:layout_centerHorizontal="true"
+            android:textSize="60dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="200dp"
+            android:layout_below="@id/stopwatchText"
             android:text="0:00:00"
             android:textSize="60sp" />
 
@@ -27,8 +37,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="72dp"
+            android:layout_below="@+id/textView"
+            android:layout_margin="24dp"
             android:onClick="onStop"
             android:src="@drawable/ic_stop" />
 
@@ -37,12 +47,9 @@
             android:id="@+id/start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/textView"
             android:layout_centerInParent="true"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="72dp"
-            android:layout_marginEnd="72dp"
-            android:layout_marginBottom="72dp"
+            android:layout_margin="24dp"
             android:onClick="onStart"
             android:src="@drawable/ic_play" />
 
@@ -52,9 +59,73 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="72dp"
+            android:layout_below="@+id/textView"
+            android:layout_margin="24dp"
             android:onClick="onReset"
+            android:src="@drawable/ic_reset" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timer"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="60dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/timerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/timerText"
+            android:text="00:00"
+            android:textSize="60sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/timerStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/timerView"
+            android:layout_margin="24dp"
+            android:onClick="onTimerStop"
+            android:src="@drawable/ic_stop" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/timerStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timerView"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:onClick="onTimerStart"
+            android:src="@drawable/ic_play" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/timerReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/timerView"
+            android:layout_margin="24dp"
+            android:onClick="onTimerReset"
             android:src="@drawable/ic_reset" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

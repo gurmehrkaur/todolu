@@ -27,8 +27,8 @@
         android:layout_marginTop="220dp"
         android:visibility="visible"
         tools:visibility="visible">
-        //android:background="@drawable/bottom_background"
-        //android:backgroundTint="@color/colorAccent"
+        android:background="@drawable/bottom_background"
+        android:backgroundTint="@color/colorAccent"
         <ImageButton
             android:id="@+id/rainbtn"
             android:layout_width="170dp"
@@ -38,7 +38,7 @@
             app:layout_constraintHorizontal_bias="0.066"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/rain" />
+            app:srcCompat="@drawable/rain_thumbnail" />
 
         <ImageButton
             android:id="@+id/cafebtn"
@@ -71,7 +71,7 @@
             app:layout_constraintHorizontal_bias="0.937"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/waves" />
+            app:srcCompat="@drawable/waves_thumbnail" />
 
         <TextView
             android:id="@+id/textView3"
@@ -138,7 +138,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/spotifybtn"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="48dp"
@@ -149,7 +149,7 @@
         app:srcCompat="@drawable/spotify" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/ytbtn"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="52dp"

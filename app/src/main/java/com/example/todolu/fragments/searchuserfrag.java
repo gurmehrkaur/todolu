@@ -1,6 +1,5 @@
-package com.example.todolu;
+package com.example.todolu.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,10 +12,10 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.todolu.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -25,7 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import Adapter.UserFollowersInfo;
+import com.example.todolu.Adapter.UserFollowersInfo;
 import Model.User;
 
 
@@ -49,6 +48,7 @@ public class searchuserfrag extends Fragment {
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
         searchbar = view.findViewById(R.id.searchbar);
         email = view.findViewById(R.id.emailitem);
         firstname = view.findViewById(R.id.firstnameitem);
@@ -67,6 +67,7 @@ public class searchuserfrag extends Fragment {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 searchUsers(charSequence.toString().toLowerCase());
+
             }
 
             @Override
@@ -78,7 +79,7 @@ public class searchuserfrag extends Fragment {
     }
 
     private void searchUsers(String s){
-        Query query = FirebaseDatabase.getInstance().getReference("/Users").orderByChild("username")
+        Query query = FirebaseDatabase.getInstance().getReference("/Users").orderByChild("email")
                 .startAt(s)
                 .endAt(s+"\uf8ff");
 
@@ -101,14 +102,14 @@ public class searchuserfrag extends Fragment {
 
     private void showUsers() {
         final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("/Users");
 
-        reference.addValueEventListener(new ValueEventListener()
+        reference.push().addValueEventListener(new ValueEventListener()
         {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
-                if (searchbar.getText().toString().equals("")) //if search bar is empty
+                if (searchbar.getText().toString().equals(""))
                 {
                     userList.clear();
                     for (DataSnapshot snapshot : dataSnapshot.getChildren())
