@@ -123,8 +123,7 @@ public class Profile extends Fragment {
                 .child("following");
 
         //change to firestore here
-        DatabaseReference postcount =  FirebaseDatabase.getInstance().getReference("/Users").child(user.getUid())
-                .child("posts");
+        DatabaseReference postcount =  FirebaseDatabase.getInstance().getReference("Posts");
 
         followercount.addValueEventListener(new ValueEventListener() {
             @Override
