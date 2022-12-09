@@ -115,11 +115,12 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:padding="10dp"/>
-            <EditText
+            <TextView
                 android:id="@+id/editemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:textSize="20dp"
                 android:inputType="textPersonName"
                 android:text="Email" />
         </LinearLayout>

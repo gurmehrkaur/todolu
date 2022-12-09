@@ -59,7 +59,7 @@ public class Profile extends Fragment {
     private StorageReference storageRef;
     private String profileid;
     private Button editprofile;
-    private long followscount, followingscount;
+    private long followscount, followingscount, postscount;
 
     public Profile() {
         // Required empty public constructor
@@ -122,6 +122,10 @@ public class Profile extends Fragment {
         DatabaseReference followingcount =  FirebaseDatabase.getInstance().getReference("/Users").child(user.getUid())
                 .child("following");
 
+        //change to firestore here
+        DatabaseReference postcount =  FirebaseDatabase.getInstance().getReference("/Users").child(user.getUid())
+                .child("posts");
+
         followercount.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -152,7 +156,7 @@ public class Profile extends Fragment {
                 }
                 else
                 {
-                    followersCountTv.setText("0");
+                    followingCountTv.setText("0");
                 }
             }
 
@@ -161,8 +165,20 @@ public class Profile extends Fragment {
 
             }
         });
+        postcount.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                postscount = (long)snapshot.getChildrenCount();
+                postCountTv.setText(Long.toString(postscount));
+            }
 
-        followersCountTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                postCountTv.setText("0");
+            }
+        });
+
+        /* followersCountTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), com.example.todolu.followers.class);
@@ -179,7 +195,7 @@ public class Profile extends Fragment {
                 intent.putExtra("location", "following");
                 startActivity(intent);
             }
-        });
+        });*/
         editprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

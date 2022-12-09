@@ -51,9 +51,9 @@ import Model.User;
 public class editprofile extends AppCompatActivity
 {
     ImageView editprofilepic, close;
-    TextView changepfp;
+    TextView changepfp, email;
     Button save;
-    EditText firstname, lastname,email;
+    EditText firstname, lastname;
 
     FirebaseUser firebaseUser;
 
