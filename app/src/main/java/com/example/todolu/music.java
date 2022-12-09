@@ -16,7 +16,7 @@ public class music extends AppCompatActivity
 {
     ImageButton getrainbtn, getwavesbtn, getcafebtn, getforestbtn, getpausebtn, getplaybtn, getstopbtn, getspotifybtn, getyoutbtn;
     Boolean isPlaying = false;
-    String[] songs = {"rain", "waves", "cafe", "forest"};
+    String[] songs = {"rain_thumbnail", "waves_thumbnail", "cafe_thumbnail", "forest_"};
     ArrayList<String> nowplaying = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -65,6 +65,7 @@ public class music extends AppCompatActivity
                 nowplaying.add(songs[3]);
             }
         });
+
         getplaybtn = findViewById(R.id.playbtn);
         getplaybtn.setOnClickListener(new View.OnClickListener() {
             @Override
