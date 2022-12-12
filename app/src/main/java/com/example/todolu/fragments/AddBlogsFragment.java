@@ -27,6 +27,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.todolu.R;
 import com.example.todolu.home;
+import com.example.todolu.main;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -63,7 +65,7 @@ public class AddBlogsFragment extends Fragment {
     private static final int IMAGE_PICKCAMERA_REQUEST = 400;
 
     Uri imageuri = null;
-    String name, email, uid, dp;
+    String name, email, uid, dp,fname,lname;
     DatabaseReference databaseReference;
     Button upload;
 
@@ -82,15 +84,19 @@ public class AddBlogsFragment extends Fragment {
         Intent intent = getActivity().getIntent();
 
         // Retrieving the user data like name ,email and profile pic using query
+        uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
-        Query query = databaseReference.orderByChild("email").equalTo(email);
+        Query query = databaseReference.orderByChild("id").equalTo(uid);
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    name = dataSnapshot1.child("name").getValue().toString();
+                    fname ="" + dataSnapshot1.child("firstname").getValue().toString();
+                    lname = "" + dataSnapshot1.child("lastname").getValue().toString();
+                    name = fname + " " + lname;
                     email = "" + dataSnapshot1.child("email").getValue();
-                    dp = "" + dataSnapshot1.child("image").getValue().toString();
+                    dp = "" + dataSnapshot1.child("imageurl").getValue().toString();
                 }
             }
 
@@ -253,9 +259,11 @@ public class AddBlogsFragment extends Fragment {
 
     // Upload the value of blog data into firebase
     private void uploadData(final String titl, final String description) {
+
         // show the progress dialog box
         pd.setMessage("Publishing Post");
         pd.show();
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         final String timestamp = String.valueOf(System.currentTimeMillis());
         String filepathname = "Posts/" + "post" + timestamp;
         Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
@@ -298,7 +306,7 @@ public class AddBlogsFragment extends Fragment {
                                     des.setText("");
                                     image.setImageURI(null);
                                     imageuri = null;
-                                    startActivity(new Intent(getContext(), home.class));
+                                    startActivity(new Intent(getContext(), main.class));
                                     getActivity().finish();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {

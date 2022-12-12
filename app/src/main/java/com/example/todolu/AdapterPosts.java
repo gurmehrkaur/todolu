@@ -41,17 +41,16 @@ import java.util.Locale;
 public class AdapterPosts extends RecyclerView.Adapter<com.example.todolu.AdapterPosts.MyHolder> {
 
     Context context;
-    String myuid;
+    String myuid,temp_dp;
     private DatabaseReference liekeref, postref;
     boolean mprocesslike = false;
+    DatabaseReference databaseReference;
 
     public AdapterPosts(Context context, List<ModelPost> modelPosts) {
         this.context = context;
         this.modelPosts = modelPosts;
-        myuid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        liekeref = FirebaseDatabase.getInstance().getReference().child("Likes");
-        postref = FirebaseDatabase.getInstance().getReference().child("Posts");
     }
+
 
     List<ModelPost> modelPosts;
 
@@ -59,22 +58,31 @@ public class AdapterPosts extends RecyclerView.Adapter<com.example.todolu.Adapte
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.row_posts, parent, false);
+
         return new MyHolder(view);
+
+
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MyHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final MyHolder holder, int position) {
+        myuid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        liekeref = FirebaseDatabase.getInstance().getReference().child("Likes");
+        postref = FirebaseDatabase.getInstance().getReference().child("Posts");
+        position = holder.getAdapterPosition();
         final String uid = modelPosts.get(position).getUid();
         String nameh = modelPosts.get(position).getUname();
         final String titlee = modelPosts.get(position).getTitle();
         final String descri = modelPosts.get(position).getDescription();
         final String ptime = modelPosts.get(position).getPtime();
+        System.out.println("PTIME IS HERE = " + ptime);
         String dp = modelPosts.get(position).getUdp();
         String plike = modelPosts.get(position).getPlike();
         final String image = modelPosts.get(position).getUimage();
         String email = modelPosts.get(position).getUemail();
         String comm = modelPosts.get(position).getPcomments();
         final String pid = modelPosts.get(position).getPtime();
+        System.out.println("PID IS HERE = " + pid);
         Calendar calendar = Calendar.getInstance(Locale.ENGLISH);
         calendar.setTimeInMillis(Long.parseLong(ptime));
         String timedate = DateFormat.format("dd/MM/yyyy hh:mm aa", calendar).toString();
@@ -85,11 +93,15 @@ public class AdapterPosts extends RecyclerView.Adapter<com.example.todolu.Adapte
         holder.like.setText(plike + " Likes");
         holder.comments.setText(comm + " Comments");
         setLikes(holder, ptime);
+
+
+        holder.picture.setVisibility(View.VISIBLE);
         try {
             Glide.with(context).load(dp).into(holder.picture);
         } catch (Exception e) {
 
         }
+
         holder.image.setVisibility(View.VISIBLE);
         try {
             Glide.with(context).load(image).into(holder.image);
@@ -107,9 +119,10 @@ public class AdapterPosts extends RecyclerView.Adapter<com.example.todolu.Adapte
         holder.likebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final int plike = Integer.parseInt(modelPosts.get(position).getPlike());
+
+                final int plike = Integer.parseInt(modelPosts.get(holder.getAdapterPosition()).getPlike());
                 mprocesslike = true;
-                final String postid = modelPosts.get(position).getPtime();
+                final String postid = modelPosts.get(holder.getAdapterPosition()).getPtime();
                 liekeref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -230,6 +243,7 @@ public class AdapterPosts extends RecyclerView.Adapter<com.example.todolu.Adapte
         Button likebtn, comment;
         LinearLayout profile;
 
+
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             picture = itemView.findViewById(R.id.picturetv);
@@ -244,6 +258,7 @@ public class AdapterPosts extends RecyclerView.Adapter<com.example.todolu.Adapte
             likebtn = itemView.findViewById(R.id.like);
             comment = itemView.findViewById(R.id.comment);
             profile = itemView.findViewById(R.id.profilelayout);
+
         }
     }
 }

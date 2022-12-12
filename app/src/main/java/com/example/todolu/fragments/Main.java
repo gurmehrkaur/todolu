@@ -35,7 +35,7 @@ import java.util.List;
  */
 public class Main extends Fragment {
 
-    private RecyclerView recyclerView;
+    /*private RecyclerView recyclerView;
 
     MainAdapter adapter;
     private  List<MainModel> list;
@@ -83,5 +83,5 @@ public class Main extends Fragment {
     private void loadDataFirestore(){
 
 
-    }
+    }*/
 }

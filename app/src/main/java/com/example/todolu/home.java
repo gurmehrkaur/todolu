@@ -82,7 +82,7 @@ public class home extends AppCompatActivity {
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         storageRef = FirebaseStorage.getInstance().getReference("Users/imageurl");
         //load user information
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
+        /*DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -103,7 +103,7 @@ public class home extends AppCompatActivity {
 
             }
 
-        });
+        });*/
     }
     /*private void changetomakepost() {
         Intent changetopost = new Intent(this, makepost.class);
